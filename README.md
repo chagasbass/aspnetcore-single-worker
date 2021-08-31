@@ -18,7 +18,7 @@
 * Implementações para leitura de Filas.
 
 > *AspnetCore.SingleWorker.Worker*
-.Worker de processamento.
+* Worker de processamento.
 
 
 
