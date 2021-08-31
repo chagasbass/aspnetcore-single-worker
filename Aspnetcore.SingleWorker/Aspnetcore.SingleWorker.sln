@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Worker", "Aspnetcore.SingleWorker.Worker\Aspnetcore.SingleWorker.Worker.csproj", "{094E5D91-7A32-41B7-B88A-CF1F484CFE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Domain", "Aspnetcore.SingleWorker.Domain\Aspnetcore.SingleWorker.Domain.csproj", "{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Infrastructure.Data", "Aspnetcore.SingleWorker.Data\Aspnetcore.SingleWorker.Infrastructure.Data.csproj", "{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Infrastructure.Messagings", "Aspnetcore.SingleWorker.Infrastructure.Messagings\Aspnetcore.SingleWorker.Infrastructure.Messagings.csproj", "{9438213B-6D3F-4144-B7BF-607A00C1219A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.CrossCutting", "Aspnetcore.SingleWorker.CrossCutting\Aspnetcore.SingleWorker.CrossCutting.csproj", "{DB37648F-B196-4983-8142-766AFD2F9129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{094E5D91-7A32-41B7-B88A-CF1F484CFE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094E5D91-7A32-41B7-B88A-CF1F484CFE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094E5D91-7A32-41B7-B88A-CF1F484CFE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094E5D91-7A32-41B7-B88A-CF1F484CFE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9438213B-6D3F-4144-B7BF-607A00C1219A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9438213B-6D3F-4144-B7BF-607A00C1219A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9438213B-6D3F-4144-B7BF-607A00C1219A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9438213B-6D3F-4144-B7BF-607A00C1219A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB37648F-B196-4983-8142-766AFD2F9129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB37648F-B196-4983-8142-766AFD2F9129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB37648F-B196-4983-8142-766AFD2F9129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB37648F-B196-4983-8142-766AFD2F9129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92C12C92-D474-487F-859D-6C1FF5313121}
+	EndGlobalSection
+EndGlobal
