@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Worker", "Aspnetcore.SingleWorker.Worker\Aspnetcore.SingleWorker.Worker.csproj", "{094E5D91-7A32-41B7-B88A-CF1F484CFE48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspnetcore.SingleWorker.Worker", "Aspnetcore.SingleWorker.Worker\Aspnetcore.SingleWorker.Worker.csproj", "{094E5D91-7A32-41B7-B88A-CF1F484CFE48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Domain", "Aspnetcore.SingleWorker.Domain\Aspnetcore.SingleWorker.Domain.csproj", "{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspnetcore.SingleWorker.Domain", "Aspnetcore.SingleWorker.Domain\Aspnetcore.SingleWorker.Domain.csproj", "{54BEB6C5-6F41-4A4E-96EF-42347FBB6F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Infrastructure.Data", "Aspnetcore.SingleWorker.Data\Aspnetcore.SingleWorker.Infrastructure.Data.csproj", "{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspnetcore.SingleWorker.Infrastructure.Data", "Aspnetcore.SingleWorker.Data\Aspnetcore.SingleWorker.Infrastructure.Data.csproj", "{BDD1EFD4-D3F7-45E8-BADD-A12EA73EE7BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Infrastructure.Messagings", "Aspnetcore.SingleWorker.Infrastructure.Messagings\Aspnetcore.SingleWorker.Infrastructure.Messagings.csproj", "{9438213B-6D3F-4144-B7BF-607A00C1219A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspnetcore.SingleWorker.Infrastructure.Messagings", "Aspnetcore.SingleWorker.Infrastructure.Messagings\Aspnetcore.SingleWorker.Infrastructure.Messagings.csproj", "{9438213B-6D3F-4144-B7BF-607A00C1219A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.CrossCutting", "Aspnetcore.SingleWorker.CrossCutting\Aspnetcore.SingleWorker.CrossCutting.csproj", "{DB37648F-B196-4983-8142-766AFD2F9129}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspnetcore.SingleWorker.CrossCutting", "Aspnetcore.SingleWorker.CrossCutting\Aspnetcore.SingleWorker.CrossCutting.csproj", "{DB37648F-B196-4983-8142-766AFD2F9129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspnetcore.SingleWorker.Shared", "Aspnetcore.SingleWorker.Shared\Aspnetcore.SingleWorker.Shared.csproj", "{9D0DDD3C-52EE-49D0-9BFB-4564EB914AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DB37648F-B196-4983-8142-766AFD2F9129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB37648F-B196-4983-8142-766AFD2F9129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB37648F-B196-4983-8142-766AFD2F9129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0DDD3C-52EE-49D0-9BFB-4564EB914AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0DDD3C-52EE-49D0-9BFB-4564EB914AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0DDD3C-52EE-49D0-9BFB-4564EB914AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0DDD3C-52EE-49D0-9BFB-4564EB914AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

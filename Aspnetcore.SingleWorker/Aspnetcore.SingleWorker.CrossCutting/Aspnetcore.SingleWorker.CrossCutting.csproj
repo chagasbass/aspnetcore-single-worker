@@ -7,9 +7,17 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aspnetcore.SingleWorker.Data\Aspnetcore.SingleWorker.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Aspnetcore.SingleWorker.Domain\Aspnetcore.SingleWorker.Domain.csproj" />
+    <ProjectReference Include="..\Aspnetcore.SingleWorker.Shared\Aspnetcore.SingleWorker.Shared.csproj" />
   </ItemGroup>
 
 </Project>
