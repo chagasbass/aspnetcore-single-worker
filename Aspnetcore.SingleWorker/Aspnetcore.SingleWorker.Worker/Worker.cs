@@ -1,11 +1,14 @@
 using Aspnetcore.SingleWorker.CrossCutting.Configurations;
+using Aspnetcore.SingleWorker.CrossCutting.Extensions;
 using Aspnetcore.SingleWorker.Domain.Commands;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,15 +18,28 @@ namespace Aspnetcore.SingleWorker.Worker
     {
         private readonly ILogger<Worker> _logger;
         private readonly IServiceScopeFactory _serviceScopeFactory;
-        private WorkerConfigOptions _workerConfigOptions;
         private readonly IMediator _mediator;
 
-        public Worker(ILogger<Worker> logger, IServiceScopeFactory serviceScopeFactory, IOptionsMonitor<WorkerConfigOptions> options, IMediator mediator)
+        private readonly WorkerConfigOptions _workerConfigOptions;
+
+        public Worker(ILogger<Worker> logger, IServiceScopeFactory serviceScopeFactory,
+                      IOptions<WorkerConfigOptions> options, IMediator mediator)
         {
-            _workerConfigOptions = options.CurrentValue;
             _logger = logger;
             _serviceScopeFactory = serviceScopeFactory;
             _mediator = mediator;
+
+            _workerConfigOptions = options.Value;
+        }
+
+        private void ReloadOptions()
+        {
+            var runtimeConfiguration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json").Build();
+
+            var value = runtimeConfiguration["WorkerConfig:Runtime"];
+            _workerConfigOptions.Runtime = Int32.Parse(value);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -32,6 +48,13 @@ namespace Aspnetcore.SingleWorker.Worker
             {
                 //faz o dispose de todos os serviços declarados como scopped a cada rodada de leitura
                 using var scope = _serviceScopeFactory.CreateScope();
+
+                /*vai na fila
+                 *cria comando
+                 *processa (montar e acessar o banco)
+                 *gera evento
+                 *FIM
+                 */
 
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
@@ -47,6 +70,8 @@ namespace Aspnetcore.SingleWorker.Worker
                 _logger.LogError($"FIM DO PROCESSAMENTO DO ORDER");
 
                 await Task.Delay(_workerConfigOptions.Runtime, stoppingToken);
+
+                _workerConfigOptions.ReloadOptions();
             }
         }
     }
