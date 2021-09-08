@@ -2,13 +2,11 @@ using Aspnetcore.SingleWorker.CrossCutting.Configurations;
 using Aspnetcore.SingleWorker.CrossCutting.Extensions;
 using Aspnetcore.SingleWorker.Domain.Commands;
 using MediatR;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,16 +28,6 @@ namespace Aspnetcore.SingleWorker.Worker
             _mediator = mediator;
 
             _workerConfigOptions = options.Value;
-        }
-
-        private void ReloadOptions()
-        {
-            var runtimeConfiguration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json").Build();
-
-            var value = runtimeConfiguration["WorkerConfig:Runtime"];
-            _workerConfigOptions.Runtime = Int32.Parse(value);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)

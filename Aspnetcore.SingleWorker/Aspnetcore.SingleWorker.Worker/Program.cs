@@ -1,4 +1,5 @@
 using Aspnetcore.SingleWorker.CrossCutting.Extensions;
+using Aspnetcore.SingleWorker.Infrastructure.Data.Configurations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -36,7 +37,8 @@ namespace Aspnetcore.SingleWorker.Worker
                     var config = GetConfiguration(args, env);
 
                     services.AddDependencyInjection()
-                            .AddOptionsPattern(config);
+                            .AddOptionsPattern(config)
+                            .AddDatabaseConfigurations(config);
 
                     services.AddHostedService<Worker>();
                 });

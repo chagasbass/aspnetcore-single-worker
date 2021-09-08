@@ -9,6 +9,7 @@ namespace Aspnetcore.SingleWorker.CrossCutting.Extensions
         public static IServiceCollection AddOptionsPattern(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<WorkerConfigOptions>(configuration.GetSection(WorkerConfigOptions.BaseConfig));
+            services.Configure<QueueConfigOptions>(configuration.GetSection(QueueConfigOptions.BaseConfig));
 
             return services;
         }
